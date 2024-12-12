@@ -2,8 +2,8 @@ extends Node2D
 
 const NetworkClient = preload("res://scripts/websocket_client.gd")
 const Packet = preload("res://scripts/packet.gd")
-const Chatbox = preload("res://chatbox.tscn")
-const Actor = preload("res://actor.tscn")
+const Chatbox = preload("res://scenes/chatbox.tscn")
+const Actor = preload("res://scenes/actor.tscn")
 
 @onready var _login_screen = get_node("Login")
 @onready var _network_client = NetworkClient.new()
