@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqle8fugcbabk"]
+
+[ext_resource type="Script" path="res://scripts/actor.gd" id="1_4je3p"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cjmp5"]
+load_path = "res://.godot/imported/elfiste.png-f4134289a2bded825a1cba310b550ca9.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihrrn"]
+size = Vector2(20, 47)
+
+[node name="Actor" type="Node2D"]
+script = ExtResource("1_4je3p")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CharacterBody2D"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -195.5
+offset_top = -53.0
+offset_right = 195.5
+offset_bottom = -30.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CharacterBody2D/CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1, 0)
+texture = SubResource("CompressedTexture2D_cjmp5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_ihrrn")
